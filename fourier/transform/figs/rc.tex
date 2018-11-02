@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+%--------start graphics code --------
+%\draw[step=0.5,very thin,black!20] (-1,-0.5) grid (6,2.5);
+\path (0,0) coordinate (ref_gnd);
+\draw
+
+  (ref_gnd) to[american voltage source=$-x(t)$] ++(0,2)
+            to[R=$R$] ++(3,0) 
+            to[C=$C$] ++(0,-2) 
+  -- (ref_gnd);
+\draw (3,2)   to [short, -o]   (4,2) node[ocirc,label={[font=\footnotesize]above:$+$}] {};
+\draw (3,0)   to [short, -o]   (4,0) node[ocirc,label={[font=\footnotesize]below:$-$}] {};
+\draw (4,1)  node[label={[font=\footnotesize]right:$y(t)$}] {};
+%--------end graphics code ----------
+\end{tikzpicture}
