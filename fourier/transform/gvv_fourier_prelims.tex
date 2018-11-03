@@ -395,10 +395,18 @@ This is known as the {\em convolution integral}.
 \begin{equation}
 x(t)*h(t) \fourier X(f)H(f)
 \end{equation}
+\item In  \eqref{eq:diff}, show that
+\begin{equation}
+H(f) = \frac{1}{1+\j 2\pi f RC}
+\end{equation}
+\item Show that 
+\begin{equation}
+y(t) = \abs{H(f_0)}\cos\sbrak{2\pi f_0 t + \angle H(f_0)}
+\end{equation}
 \end{enumerate}
 \section{Filtering}
 \begin{enumerate}[1.]
-\item Find $H(f)$ in \eqref{eq:diff} and plot $\abs{H(f)}$ for different values of $RC$.
+\item  Plot $\abs{H(f)}$ for different values of $RC$.
 The following code plots Fig. \ref{fig:lpf}.
 \lstinputlisting{./codes/lpf.py}
 \begin{figure}[!h]

@@ -1,15 +1,14 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2018/Termux)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: gvv_fourier_prelims.aux
 The style file: IEEEtran.bst
 I found no \citation commands---while reading file gvv_fourier_prelims.aux
+I found no \bibdata command---while reading file gvv_fourier_prelims.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: IEEEabrv.bib
-Database file #2: gvv_fourier_prelims.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -17,7 +16,7 @@ Database file #2: gvv_fourier_prelims.bib
 Done.
 You've used 0 entries,
             4087 wiz_defined-function locations,
-            1343 strings with 17626 characters,
+            820 strings with 7307 characters,
 and the built_in function-call counts, 104 in all, are:
 = -- 0
 > -- 0
@@ -56,4 +55,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 22
-(There was 1 error message)
+(There were 2 error messages)
