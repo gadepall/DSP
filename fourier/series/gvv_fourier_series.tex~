@@ -78,10 +78,9 @@ frame=single,
 breaklines=true
 }
 \lstset{
-%language=C,
+language=C,
 frame=single, 
-breaklines=true,
-columns=fullflexible
+breaklines=true
 }
 \newcommand\bigzero{\makebox(0,0){\text{\huge0}}}
 

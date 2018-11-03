@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  4 NOV 2018 01:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  4 NOV 2018 02:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,57 +542,49 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
 tlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
-tlang1.sty
-File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
-tmisc.sty
-File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 ) (./gvv_fourier_series.aux)
 \openout1 = `gvv_fourier_series.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 89.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 89.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 90.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 90.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oml
 txmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 89.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 90.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oms
 txsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 89.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 90.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 90.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/omx
 txex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 89.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 90.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 90.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 exa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 90.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1
 txr.fd
@@ -619,35 +611,35 @@ Package caption Info: End \AtBeginDocument code.
 \c@rem=\count144
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 243.
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 243.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 244.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 244.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ur
 sfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 243.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 244.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 mia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 243.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 244.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 sya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 243.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 244.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 syb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 243.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 244.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
@@ -656,7 +648,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 )
 File: tlc.eps Graphic file (type eps)
  <tlc.eps>
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 243.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 244.
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
 File: tlc.eps Graphic file (type eps)
@@ -680,42 +672,41 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 10.
 )
 File: ./figs/1.1.eps Graphic file (type eps)
- <./figs/1.1.eps> [1
+ <./figs/1.1.eps>
+Underfull \vbox (badness 7944) has occurred while \output is active []
+
+ [1
 
 
 ]
 File: ./figs/1.4.eps Graphic file (type eps)
- <./figs/1.4.eps> (./chapter2/chapter2_sol.tex
-File: ./chapter2/figs/2.1.eps Graphic file (type eps)
 
-<./chapter2/figs/2.1.eps>
-Underfull \vbox (badness 6284) has occurred while \output is active []
+<./figs/1.4.eps>
+File: ./figs/2.1.eps Graphic file (type eps)
+ <./figs/2.1.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-(./chapter2/codes/2.2.py)
-File: chapter2/figs/2.2.eps Graphic file (type eps)
- <chapter2/figs/2.2.eps> (./chapter2/codes/2.3.py
-[3]) (./chapter2/codes/2.4.py) (./chapter2/codes/2.5.py
-Underfull \vbox (badness 7814) has occurred while \output is active []
+(./codes/2.2.py)
+File: ./figs/2.2.eps Graphic file (type eps)
+ <./figs/2.2.eps> (./codes/2.3.py) [3] (./codes/2.4.py)
+File: ./figs/2.5.eps Graphic file (type eps)
 
- [4])
-File: ./chapter2/figs/2.5.eps Graphic file (type eps)
-
-<./chapter2/figs/2.5.eps>
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 218
+<./figs/2.5.eps>
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 590
 .
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1
 txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-)) [5] (./gvv_fourier_series.aux) ) 
+) [4] (./gvv_fourier_series.aux) ) 
 Here is how much of TeX's memory you used:
- 8562 strings out of 492645
- 127612 string characters out of 6118921
- 532420 words of memory out of 5000000
- 12291 multiletter control sequences out of 15000+600000
+ 8432 strings out of 492645
+ 125786 string characters out of 6118921
+ 475410 words of memory out of 5000000
+ 12174 multiletter control sequences out of 15000+600000
  68120 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,15n,49p,510b,2054s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,15n,40p,510b,1553s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_fourier_series.dvi (5 pages, 37896 bytes).
+Output written on gvv_fourier_series.dvi (4 pages, 27140 bytes).
