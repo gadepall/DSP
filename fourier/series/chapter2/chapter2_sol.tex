@@ -89,7 +89,9 @@ H(s) &= \frac{1}{\brak{sCR + 1 }\cbrak{\brak{sCR + 2 }^2-1}-\brak{sCR + 2 }}
 \end{align}
 %
 \begin{problem}
-Substitute $s = \j 2\pi f, \j =  \sqrt{-1}$ in \eqref{lpf_laplace} to obtain $H(f)$.  $H(f)$ is known as the frequency response. Plot $\abs{H(f)}$ in octave for $-20 < f < 20$, given that $R = 1 \,k\Omega$ and $C = 10 \,\mu F$.
+Substitute $s = \jmath 2\pi f, \jmath =  \sqrt{-1}$ in \eqref{lpf_laplace} to obtain $H(f)$.  
+$H(f)$ is 
+known as the frequency response. Plot $\abs{H(f)}$ in octave for $-20 < f < 20$, given that $R = 1 \,k\Omega$ and $C = 10 \,\mu F$.
 \end{problem}
 %
 \solution 
@@ -111,12 +113,12 @@ Find the frequency at which $\abs{H(f)}^2 = \frac{1}{2}$. This frequency is
 known as the 3-dB bandwidth of $H(f)$.
 \end{problem}
 %
-\solution Substituting sCR = \j x in \eqref{lpf_laplace},
+\solution Substituting $sCR = \jmath x$ in \eqref{lpf_laplace},
 %
 \begin{align}
- \abs{H(\j x)} &= \frac{1}{\sqrt{2}} \\
+ \abs{H(\jmath x)} &= \frac{1}{\sqrt{2}} \\
  \Rightarrow 
- -jx^3 + 5x^2 +j6x + 1 &= \sqrt{2} \\
+ -\jmath x^3 + 5x^2 +\jmath 6x + 1 &= \sqrt{2} \\
 \Rightarrow 
  x^2(6-x^2)^2 + (1+5x^2)^2 &= 2 \\
  \Rightarrow 
