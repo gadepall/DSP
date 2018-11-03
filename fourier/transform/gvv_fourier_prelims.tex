@@ -330,7 +330,7 @@ by solving the differential equation in \eqref{eq:diff} using the integrating fa
 The Fourier transform of a signal $g(t)$ is defined as
 \begin{equation}
 \label{eq:fourier}
-G(f) = \int_{-\infty}^{\infty}g(t)e^{-2\pi f t}\,dt
+G(f) = \int_{-\infty}^{\infty}g(t)e^{-\j 2\pi f t}\,dt
 \end{equation}
 \begin{enumerate}[1.]
 \item Define the Dirac delta function as
@@ -349,12 +349,7 @@ and show that
 \begin{equation}
 \delta (t-t_0) \fourier e^{-\j2\pi f t_0}
 \end{equation}
-\item Assuming
-\begin{equation}
-\label{eq:fourier}
-g(t) = \int_{-\infty}^{\infty}G(f)e^{2\pi f t}\,dt,
-\end{equation}
-show that 
+\item  Show that 
 \begin{equation}
 \label{eq:duality}
 \begin{split}
@@ -363,6 +358,12 @@ g(t) & \fourier G(f)
 \implies G(t) & \fourier g(-f)
 \end{split}
 \end{equation}
+assuming
+\begin{equation}
+\label{eq:inv_fourier}
+g(t) = \int_{-\infty}^{\infty}G(f)e^{\j 2\pi f t}\,df.
+\end{equation}
+\eqref{eq:inv_fourier} is known as the inverse Fourier transform.
 \item Show that
 \begin{equation}
 \cos2\pi f_0 t \fourier \frac{1}{2}\sbrak{\delta\brak{f-f_0}+\delta \brak{f+f_0}}
