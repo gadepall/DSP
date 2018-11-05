@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  4 NOV 2018 02:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  5 NOV 2018 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,19 +661,13 @@ File: tlc.eps Graphic file (type eps)
 \tf@toc=\write3
 \openout3 = `gvv_fourier_series.toc'.
 
- (./codes/1.1.py
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 10.
-
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oms
-txr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 10.
-)
 File: ./figs/1.1.eps Graphic file (type eps)
  <./figs/1.1.eps>
-Underfull \vbox (badness 7944) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
@@ -684,29 +678,41 @@ File: ./figs/1.4.eps Graphic file (type eps)
 <./figs/1.4.eps>
 File: ./figs/2.1.eps Graphic file (type eps)
  <./figs/2.1.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-(./codes/2.2.py)
 File: ./figs/2.2.eps Graphic file (type eps)
- <./figs/2.2.eps> (./codes/2.3.py) [3] (./codes/2.4.py)
-File: ./figs/2.5.eps Graphic file (type eps)
 
-<./figs/2.5.eps>
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 590
+<./figs/2.2.eps>
+File: ./figs/2.5.eps Graphic file (type eps)
+ <./figs/2.5.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 606
 .
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1
 txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-) [4] (./gvv_fourier_series.aux) ) 
+) [3] [4
+
+] (./gvv_fourier_series.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8432 strings out of 492645
- 125786 string characters out of 6118921
- 475410 words of memory out of 5000000
- 12174 multiletter control sequences out of 15000+600000
+ 8267 strings out of 492645
+ 124010 string characters out of 6118921
+ 416410 words of memory out of 5000000
+ 12024 multiletter control sequences out of 15000+600000
  68120 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,15n,40p,510b,1553s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,15n,40p,510b,1581s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_fourier_series.dvi (4 pages, 27140 bytes).
+Output written on gvv_fourier_series.dvi (4 pages, 20656 bytes).
