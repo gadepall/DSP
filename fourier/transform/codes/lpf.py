@@ -5,7 +5,7 @@ import shlex
 
 #Filter Characteristics
 
-R = 5*1e2; #1K ohm resistance
+R = 5*1e2; #500 ohm resistance
 C = 10e-6;#10 uF capacitance
 
 #Plotting the filter amplitude response
