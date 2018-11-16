@@ -22,9 +22,9 @@ plt.xlabel('$f$ (Hz)')
 plt.ylabel('$H(f)$')
 #Save figure
 #plt.savefig('../figs/lpf.eps')
-#plt.savefig('lpf.pdf')
-#subprocess.run(shlex.split("termux-open lpf.pdf"))
-plt.show()
+plt.savefig('../figs/lpf.pdf')
+subprocess.run(shlex.split("termux-open ../figs/lpf.pdf"))
+#plt.show()
 
 
 
