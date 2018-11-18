@@ -403,6 +403,7 @@ H(f) = \frac{1}{1+\j 2\pi f RC}
 \end{equation}
 \item Show that 
 \begin{equation}
+\label{eq:cos_resp}
 y(t) = \abs{H(f_0)}\cos\sbrak{2\pi f_0 t + \angle H(f_0)}
 \end{equation}
 \end{enumerate}
@@ -418,7 +419,7 @@ The following code plots Fig. \ref{fig:lpf}.
 \label{fig:lpf}
 \end{figure}
 \item Sketch $x(t) = \cos 100\pi t, \quad t \in \brak{-50 ms, 50 ms}$.
-\item Sketch $y(t)$ in \eqref{eq:yt}.
+\item Sketch $y(t)$ in \eqref{eq:yt} using \eqref{eq:cos_resp} for $f_0 = 50$ Hz.
 \\
 \solution The following code plots Fig. \ref{fig:xtyt}
 \lstinputlisting{./codes/xtyt.py}
