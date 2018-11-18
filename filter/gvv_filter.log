@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  16 NOV 2018 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  18 NOV 2018 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,16 +445,11 @@ Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
 \multirow@dima=\skip64
 \bigstrutjot=\dimen153
 )
-(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/enumitem/en
-umitem.sty
-Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip65
-\enit@outerparindent=\dimen154
-\enit@toks=\toks28
-\enit@inbox=\box34
-\enitdp@description=\count128
-)
-(/data/data/com.termux/files/home/texmf/tex/latex/iithtlc/iithtlc.sty
+(/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/tools/enume
+rate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks28
+) (/data/data/com.termux/files/home/texmf/tex/latex/iithtlc/iithtlc.sty
 Package: iithtlc 10/04/2016 IITH TLC
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/graphics/gr
@@ -475,30 +470,30 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvips.def on input line 99.
 )
-\Gin@req@height=\dimen155
-\Gin@req@width=\dimen156
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
 ))
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/li
 stings.sty
-\lst@mode=\count129
-\lst@gtempboxa=\box35
+\lst@mode=\count128
+\lst@gtempboxa=\box34
 \lst@token=\toks29
-\lst@length=\count130
-\lst@currlwidth=\dimen157
-\lst@column=\count131
-\lst@pos=\count132
-\lst@lostspace=\dimen158
-\lst@width=\dimen159
-\lst@newlines=\count133
-\lst@lineno=\count134
-\lst@maxwidth=\dimen160
+\lst@length=\count129
+\lst@currlwidth=\dimen156
+\lst@column=\count130
+\lst@pos=\count131
+\lst@lostspace=\dimen157
+\lst@width=\dimen158
+\lst@newlines=\count132
+\lst@lineno=\count133
+\lst@maxwidth=\dimen159
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
 tmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count135
-\lst@skipnumbers=\count136
-\lst@framebox=\box36
+\c@lstnumber=\count134
+\lst@skipnumbers=\count135
+\lst@framebox=\box35
 )
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/li
 stings.cfg
@@ -512,60 +507,60 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 ) (./gvv_filter.aux)
 \openout1 = `gvv_filter.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 82.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 82.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 68.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 68.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oml
 txmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 82.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 68.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oms
 txsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 82.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 68.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/omx
 txex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 82.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 82.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 68.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 exa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 82.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 68.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1
 txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 -- Lines per column: 50 (exact).
-LaTeX Info: Redefining \celsius on input line 82.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 82.
+LaTeX Info: Redefining \celsius on input line 68.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 68.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 82.
-Package gensymb Info: Using \Omega for \ohm on input line 82.
+LaTeX Info: Redefining \ohm on input line 68.
+Package gensymb Info: Using \Omega for \ohm on input line 68.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -579,45 +574,45 @@ aption.sty
 Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count137
-\c@theorem=\count138
-\c@problem=\count139
-\c@proposition=\count140
-\c@lemma=\count141
-\c@example=\count142
-\c@definition=\count143
-\c@rem=\count144
+\c@lstlisting=\count136
+\c@theorem=\count137
+\c@problem=\count138
+\c@proposition=\count139
+\c@lemma=\count140
+\c@example=\count141
+\c@definition=\count142
+\c@rem=\count143
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
-LaTeX Font Info:    Calculating math sizes for size <24> on input line 228.
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 228.
+LaTeX Font Info:    Calculating math sizes for size <24> on input line 214.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 214.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ur
 sfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 228.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 214.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 mia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsya on input line 228.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 214.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 sya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 228.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 214.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
 syb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 228.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 214.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/utx
@@ -626,7 +621,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 )
 File: tlc.eps Graphic file (type eps)
  <tlc.eps>
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 228.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 214.
 File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
 File: tlc.eps Graphic file (type eps)
@@ -635,7 +630,7 @@ File: iith_logo.eps Graphic file (type eps)
  <iith_logo.eps>
 File: tlc.eps Graphic file (type eps)
  <tlc.eps>
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 228.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 214.
 
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oms
@@ -643,75 +638,42 @@ txr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 228.
- (./codes/3a.py)
-File: ./figs/xn.eps Graphic file (type eps)
- <./figs/xn.eps>
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 214.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+No file gvv_filter.toc.
+\tf@toc=\write3
+\openout3 = `gvv_filter.toc'.
 
-(./codes/3b.py
+(./codes/xnyn.py
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 6.
-)
-File: ./figs/3b.eps Graphic file (type eps)
- <./figs/3b.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./codes/3c.py [1
-
-
-])
-File: ./figs/3c.eps Graphic file (type eps)
- <./figs/3c.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./codes/3d.py)
-File: ./figs/3d.eps Graphic file (type eps)
- <./figs/3d.eps> [2] (./codes/4a.py
-LaTeX Font Info:    Font shape `OMS/txr/m/it' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 4.
-LaTeX Font Info:    Try loading font information for OML+txr on input line 4.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 12.
+LaTeX Font Info:    Try loading font information for OML+txr on input line 15.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/txfonts/oml
 txr.fd
 File: omltxr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Font shape `OML/txr/m/it' in size <12> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 4.
+LaTeX Font Info:    Font shape `OML/txr/m/n' in size <12> not available
+(Font)              Font shape `OML/txmi/m/it' tried instead on input line 15.
 )
-File: ./figs/4a.eps Graphic file (type eps)
- <./figs/4a.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./codes/4b.py [3])
-File: ./figs/4b.eps Graphic file (type eps)
- <./figs/4b.eps> (./codes/4c.py)
-File: ./figs/4c.eps Graphic file (type eps)
- <./figs/4c.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+File: ./figs/xnyn.eps Graphic file (type eps)
+ <./figs/xnyn.eps> [1
 
 
-Underfull \vbox (badness 3884) has occurred while \output is active []
+] [2
 
- [4]
-(./codes/8.py)
-File: ./figs/8.eps Graphic file (type eps)
- <./figs/8.eps> (./codes/8a.py [5])
-File: ./figs/8a.eps Graphic file (type eps)
- <./figs/8a.eps>
-(./codes/15.py) [6] (./gvv_filter.aux) ) 
+] (./gvv_filter.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7823 strings out of 492645
- 118038 string characters out of 6118921
- 541107 words of memory out of 5000000
- 11569 multiletter control sequences out of 15000+600000
- 72873 words of font info for 186 fonts, out of 8000000 for 9000
+ 7475 strings out of 492645
+ 112616 string characters out of 6118921
+ 463367 words of memory out of 5000000
+ 11249 multiletter control sequences out of 15000+600000
+ 73591 words of font info for 187 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,9n,40p,502b,1614s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,40p,228b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_filter.dvi (6 pages, 51724 bytes).
+Output written on gvv_filter.dvi (2 pages, 7924 bytes).
