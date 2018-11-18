@@ -316,6 +316,7 @@ RC\frac{dy}{dt} + y(t) = x(t)
 \end{figure}
 \item Let $x(t) = \cos 2\pi f_0 t$. Show that
 \begin{equation}
+\label{eq:yt}
 y(t) = \frac{1}{\sqrt{1+\brak{2\pi f_0 RC}^2}}\cos\sbrak{2\pi f_0 \brak{t - \tan^{-1}RC}  }
 \end{equation}
 by solving the differential equation in \eqref{eq:diff} using the integrating factor.
@@ -416,14 +417,24 @@ The following code plots Fig. \ref{fig:lpf}.
 \caption{Low Pass Filter} 
 \label{fig:lpf}
 \end{figure}
-\item Sketch the output when $x(t) = \cos 100\pi t + \cos 300 \pi t, R = 500 \Omega$ and $C = 10 
+\item Sketch $x(t) = \cos 100\pi t, \quad t \in \brak{-50 ms, 50 ms}$.
+\item Sketch $y(t)$ in \eqref{eq:yt}.
+\\
+\solution The following code plots Fig. \ref{fig:xtyt}
+\lstinputlisting{./codes/xtyt.py}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{./figs/xtyt.eps}
+\caption{Sinusoidal Response} 
+\label{fig:xtyt}
+\end{figure}
+
+\item Sketch the output $y(t)$ in Fig. \ref{fig:rc} when $x(t) = \cos 100\pi t + 
+\cos 300 \pi t, R = 500 \Omega$ and $C = 10 
 \mu$F for $t \in \brak{-50 ms, 50 ms}$. Comment.
 \item Sketch the output when $x(t) = \cos 100\pi t + \cos 2 \pi k t, R = 500 \Omega$ and $C = 10 
-\mu$F for different values of $k$.  Find the value of $k$ for which the output of  $H(f)$ is  
-almost $\cos 100 \pi t$.
-%\begin{lstlisting}
-%\input{./codes/lpf.py}
-%\end{lstlisting}
+\mu$F for different values of $k$.  Find the value of $k$ for which the output of  
+$H(f)$ has frequency 50 Hz.
 \end{enumerate}
 
 %\bibliography{IEEEabrv,gvv_fourier_prelims}

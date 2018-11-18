@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  5 NOV 2018 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  18 NOV 2018 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1388,29 +1388,29 @@ File: tlc.eps Graphic file (type eps)
 
  (./figs/rc.tex)
 
-LaTeX Warning: Command \j invalid in math mode on input line 333.
+LaTeX Warning: Command \j invalid in math mode on input line 334.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 350.
+LaTeX Warning: Command \j invalid in math mode on input line 351.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 364.
+LaTeX Warning: Command \j invalid in math mode on input line 365.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 373.
+LaTeX Warning: Command \j invalid in math mode on input line 374.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 386.
+LaTeX Warning: Command \j invalid in math mode on input line 387.
 
 [1
 
 
 ]
 
-LaTeX Warning: Command \j invalid in math mode on input line 401.
+LaTeX Warning: Command \j invalid in math mode on input line 402.
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 412.
+nput line 413.
 (./codes/lpf.py
 LaTeX Font Info:    Try loading font information for OMS+txr on input line 8.
 
@@ -1422,23 +1422,29 @@ LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 8.
 )
 File: ./figs/lpf.eps Graphic file (type eps)
- <./figs/lpf.eps> [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
- (./gvv_fourier_prelims.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 430.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
+ <./figs/lpf.eps> (./codes/xtyt.py [2])
+File: ./figs/xtyt.eps Graphic file (type eps)
+ <./figs/xtyt.eps>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
+ [3
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
+
+(./gvv_fourier_prelims.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 441.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
 Package rerunfilecheck Info: File `gvv_fourier_prelims.out' has not changed.
 (rerunfilecheck)             Checksum: DBF13E92E4844613800AD75A40480346;150.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
  ) 
 Here is how much of TeX's memory you used:
- 37767 strings out of 492645
- 794676 string characters out of 6118921
- 1024130 words of memory out of 5000000
- 41183 multiletter control sequences out of 15000+600000
+ 37774 strings out of 492645
+ 794774 string characters out of 6118921
+ 1047293 words of memory out of 5000000
+ 41187 multiletter control sequences out of 15000+600000
  602289 words of font info for 197 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,17n,77p,677b,1534s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,17n,77p,677b,1845s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_fourier_prelims.dvi (2 pages, 40732 bytes).
+Output written on gvv_fourier_prelims.dvi (3 pages, 53980 bytes).
