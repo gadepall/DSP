@@ -138,7 +138,7 @@ columns=fullflexible
 
 \title{ 
 \logo{
-Digital Filter
+Digital Signal Processing
 }
 %	\logo{Octave for Math Computing }
 }
@@ -164,7 +164,8 @@ Digital Filter
 \author{ G V V Sharma$^{*}$ %<-this  stops a space
 \thanks{*The author is with the Department
 of Electrical Engineering, Indian Institute of Technology, Hyderabad
-502285 India e-mail:  \{gadepall\}@iith.ac.in.$\dagger$  All content in the manuscript is released under GNU GPL.  Free to use for anything. }% <-this % stops a space
+502285 India e-mail:  gadepall@iith.ac.in.  All content in the manuscript is 
+released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 %\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
 %\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
 }
@@ -231,7 +232,7 @@ This manual provides a simple introduction to the digital filter.
 \begin{enumerate}[1.]
 \item Let
 \begin{equation}
-x(n) = \cbrak{1,2,\underset{\uparrow}{3},4,2,1}
+x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
 \end{equation}
 Sketch $x(n)$.
 \item Let
@@ -243,7 +244,9 @@ y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2),
 Sketch $y(n)$.
 \\
 \solution The following code yields Fig. \ref{fig:xnyn}.
-\lstinputlisting{./codes/xnyn.py}
+\begin{lstlisting}
+wget https://github.com/gadepall/EE1310/raw/master/filter/codes/xnyn.py
+\end{lstlisting}
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[width=\columnwidth]{./figs/xnyn}
