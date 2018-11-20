@@ -305,6 +305,7 @@ from  \eqref{eq:iir_filter} assuming that the $Z$-transform is a linear operatio
 Y(z) + \frac{1}{2}z^{-1}Y(z) &= X(z)+z^{-2}X(z)
 \\
 \implies \frac{Y(z)}{X(z)} &= \frac{1 + z^{-2}}{1 + \frac{1}{2}z^{-1}}
+\label{eq:freq_resp}
 \end{align}
 %
 \item Find the Z transform of 
@@ -351,10 +352,6 @@ a^nu(n) \ztrans \frac{1}{1-az^{-1}} \quad \abs{z} > \abs{a}
 \end{equation}
 %
 \item 
-%\begin{problem}
-%\label{prob:H(z)}
-%Obtain $H(z)$ for $b$ and $a$ in Problem \ref{prob:output} using \eqref{eq:z_trans_shift}. 
-%\end{problem}
 Let
 \begin{equation}
 H\brak{e^{\j \omega}} = H\brak{z = e^{\j \omega}}.
@@ -363,6 +360,9 @@ Plot $\abs{H\brak{e^{\j \omega}}}$.  Comment.  $H(e^{\j \omega})$ is
 known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
 \\
 \solution The following code plots Fig. \ref{fig:dtft}.
+\begin{lstlisting}
+wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/dtft.py
+\end{lstlisting}
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/dtft}
@@ -371,49 +371,54 @@ known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
 \end{figure}
 \end{enumerate}
 
-\begin{problem}
-\label{prob:iir}
-Show that $H(z)$ in Problem \ref{prob:H(z)} can be expressed as
-%
-\begin{equation}
-\label{eq:ztransab}
-H(z) = \sum_{k}\frac{c_k}{1-d_kz^{-1}}
-\end{equation}
-%
-using partial fractions. Find the values of $c_k$ and $d_k$.
-%the filter represented by the coefficients $a$ and $b$ in \eqref{eq:iir_filter} is defined as 
-\end{problem}
 \section{Impulse Response}
-\begin{problem}
-\label{prob:impulse_resp}
-Find an expression for $h(n)$ using $H(z)$ in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
+\begin{enumerate}[\thesection.1]
+\item \label{prob:impulse_resp}
+Find an expression for $h(n)$ using $H(z)$, given that 
+%in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
 \begin{equation}
 \label{eq:impulse_resp}
 h(n) \ztrans H(z)
 \end{equation}
 and there is a one to one relationship between $h(n)$ and $H(z)$. $h(n)$ is known as the {\em impulse response} of the
 system defined by \eqref{eq:iir_filter}.
-\end{problem}
+\\
+\solution From \eqref{eq:freq_resp},
+\begin{align}
+H(z) &= \frac{1}{1 + \frac{1}{2}z^{-1}} + \frac{ z^{-2}}{1 + \frac{1}{2}z^{-1}}
+\\
+\implies h(n) &= \brak{-\frac{1}{2}}^{n}u(n) + \brak{-\frac{1}{2}}^{n-2}u(n-2)
+\end{align}
+using \eqref{eq:anun} and \eqref{eq:z_trans_shift}.
+\item Sketch $h(n)$. Is it bounded? Convergent? 
+\\
+\solution The following code plots Fig. \ref{fig:hn}.
+\begin{lstlisting}
+wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hn.py
+\end{lstlisting}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/hn}
+\caption{$\abs{H\brak{e^{\j\omega}}}$}
+\label{fig:hn}
+\end{figure}
 %
-\begin{problem}
-Sketch $h(n)$. Is it bounded? Convergent? 
-\end{problem}
-\begin{problem}
-The system with $h(n)$ is defined to be stable if
+\item The system with $h(n)$ is defined to be stable if
 \begin{equation}
 \sum_{n=-\infty}^{\infty}h(n) < \infty
 \end{equation}
 Is the system defined by \eqref{eq:iir_filter} stable for the impulse response in \eqref{eq:impulse_resp}?
-\end{problem}
 %
-\begin{problem}
-Compute $h(n)$ using 
+\item 
+Compute and sketch $h(n)$ using 
 \begin{equation}
 \label{eq:iir_filter_h}
  \sum _{m=0}^{M}a\brak{m}h\brak{n-m}=\sum _{k=0}^{N}b\brak{k}\delta\brak{n-k}
 \end{equation}
-\end{problem}
+%
 This is the definition of $h(n)$.
+\end{enumerate}
+
 \begin{problem}
 Compute 
 %

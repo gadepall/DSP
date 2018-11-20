@@ -8,7 +8,6 @@ import shlex
 
 #DTFT
 def H(z):
-	#s = 1j*2*np.pi*f
 	num = np.polyval([1,0,1],z**(-1))
 	den = np.polyval([0.5,1],z**(-1))
 	H = num/den
