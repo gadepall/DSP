@@ -1,1 +1,4 @@
 \contentsline {section}{\numberline {1}Difference Equation}{1}
+\contentsline {section}{\numberline {2}$Z$-transform}{1}
+\contentsline {section}{\numberline {3}Impulse Response}{2}
+\contentsline {section}{\numberline {4}DFT and FFT}{3}

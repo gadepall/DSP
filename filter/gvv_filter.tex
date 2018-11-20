@@ -108,13 +108,15 @@ columns=fullflexible
 \providecommand{\mtx}[1]{\mathbf{#1}}
 \providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\ztrans}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
+
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
 	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\numberwithin{equation}{section}
 %\numberwithin{equation}{subsection}
-\numberwithin{equation}{problem}
 %\numberwithin{problem}{subsection}
 %\numberwithin{definition}{subsection}
 \makeatletter
@@ -218,18 +220,20 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 
 \tableofcontents
 
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
+\renewcommand{\thefigure}{\thesection.\theenumi}
+\renewcommand{\thetable}{\thesection.\theenumi}
+
+%\renewcommand{\theequation}{\thesection}
 
 
 \bigskip
 
 \begin{abstract}
-This manual provides a simple introduction to the digital filter.
+This manual provides a simple introduction to digital signal processing.
 \end{abstract}
 
 \section{Difference Equation}
-\begin{enumerate}[1.]
+\begin{enumerate}[\thesection.1]
 \item Let
 \begin{equation}
 x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
@@ -237,6 +241,7 @@ x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
 Sketch $x(n)$.
 \item Let
 \begin{multline}
+\label{eq:iir_filter}
 y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2), 
 \\
  y(n) = 0, n < 0
@@ -256,6 +261,206 @@ wget https://github.com/gadepall/EE1310/raw/master/filter/codes/xnyn.py
 \end{figure}
 
 \end{enumerate}
+\section{$Z$-transform}
+\begin{enumerate}[\thesection.1]
+\item The $Z$-transform of $x(n)$ is defined as
+%
+\begin{equation}
+\label{eq:z_trans}
+X(z)={\mathcal {Z}}\{x(n)\}=\sum _{n=-\infty }^{\infty }x(n)z^{-n}
+\end{equation}
+%
+Show that
+\begin{equation}
+\label{eq:shift1}
+{\mathcal {Z}}\{x(n-1)\} = z^{-1}X(z)
+\end{equation}
+and find
+\begin{equation}
+	{\mathcal {Z}}\{x(n-k)\} 
+\end{equation}
+\solution From \eqref{eq:z_trans},
+\begin{align}
+{\mathcal {Z}}\{x(n-k)\} &=\sum _{n=-\infty }^{\infty }x(n-1)z^{-n}
+\\
+&=\sum _{n=-\infty }^{\infty }x(n)z^{-n-1} = z^{-1}\sum _{n=-\infty }^{\infty }x(n)z^{-n}
+\end{align}
+resulting in \eqref{eq:shift1}. Similarly, it can be shown that
+%
+\begin{equation}
+\label{eq:z_trans_shift}
+	{\mathcal {Z}}\{x(n-k)\} = z^{-k}X(z)
+\end{equation}
+
+\item Find
+%
+\begin{equation}
+H(z) = \frac{Y(z)}{X(z)}
+\end{equation}
+%
+from  \eqref{eq:iir_filter} assuming that the $Z$-transform is a linear operation.
+\\
+\solution  Applying \eqref{eq:z_trans_shift} in \eqref{eq:iir_filter},
+\begin{align}
+Y(z) + \frac{1}{2}z^{-1}Y(z) &= X(z)+z^{-2}X(z)
+\\
+\implies \frac{Y(z)}{X(z)} &= \frac{1 + z^{-2}}{1 + \frac{1}{2}z^{-1}}
+\end{align}
+%
+\item Find the Z transform of 
+\begin{equation}
+\delta(n)
+=
+\begin{cases}
+1 & n = 0
+\\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+and show that the $Z$-transform of
+\begin{equation}
+\label{eq:unit_step}
+u(n)
+=
+\begin{cases}
+1 & n \ge 0
+\\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+is
+\begin{equation}
+U(z) = \frac{1}{1-z^{-1}}, \quad \abs{z} > 1
+\end{equation}
+\solution It is easy to show that
+\begin{equation}
+\delta(n) \ztrans 1
+\end{equation}
+and from \eqref{eq:unit_step},
+\begin{align}
+U(z) &= \sum _{n= 0}^{\infty}z^{-n}
+\\
+&=\frac{1}{1-z^{-1}}, \quad \abs{z} > 1
+\end{align}
+using the fomula for the sum of an infinite geometric progression.
+%
+\item Show that 
+\begin{equation}
+\label{eq:anun}
+a^nu(n) \ztrans \frac{1}{1-az^{-1}} \quad \abs{z} > \abs{a}
+\end{equation}
+%
+\item 
+%\begin{problem}
+%\label{prob:H(z)}
+%Obtain $H(z)$ for $b$ and $a$ in Problem \ref{prob:output} using \eqref{eq:z_trans_shift}. 
+%\end{problem}
+Let
+\begin{equation}
+H\brak{e^{\j \omega}} = H\brak{z = e^{\j \omega}}.
+\end{equation}
+Plot $\abs{H\brak{e^{\j \omega}}}$.  Comment.  $H(e^{\j \omega})$ is
+known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
+\\
+\solution The following code plots Fig. \ref{fig:dtft}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/dtft}
+\caption{$\abs{H\brak{e^{\j\omega}}}$}
+\label{fig:dtft}
+\end{figure}
+\end{enumerate}
+
+\begin{problem}
+\label{prob:iir}
+Show that $H(z)$ in Problem \ref{prob:H(z)} can be expressed as
+%
+\begin{equation}
+\label{eq:ztransab}
+H(z) = \sum_{k}\frac{c_k}{1-d_kz^{-1}}
+\end{equation}
+%
+using partial fractions. Find the values of $c_k$ and $d_k$.
+%the filter represented by the coefficients $a$ and $b$ in \eqref{eq:iir_filter} is defined as 
+\end{problem}
+\section{Impulse Response}
+\begin{problem}
+\label{prob:impulse_resp}
+Find an expression for $h(n)$ using $H(z)$ in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
+\begin{equation}
+\label{eq:impulse_resp}
+h(n) \ztrans H(z)
+\end{equation}
+and there is a one to one relationship between $h(n)$ and $H(z)$. $h(n)$ is known as the {\em impulse response} of the
+system defined by \eqref{eq:iir_filter}.
+\end{problem}
+%
+\begin{problem}
+Sketch $h(n)$. Is it bounded? Convergent? 
+\end{problem}
+\begin{problem}
+The system with $h(n)$ is defined to be stable if
+\begin{equation}
+\sum_{n=-\infty}^{\infty}h(n) < \infty
+\end{equation}
+Is the system defined by \eqref{eq:iir_filter} stable for the impulse response in \eqref{eq:impulse_resp}?
+\end{problem}
+%
+\begin{problem}
+Compute $h(n)$ using 
+\begin{equation}
+\label{eq:iir_filter_h}
+ \sum _{m=0}^{M}a\brak{m}h\brak{n-m}=\sum _{k=0}^{N}b\brak{k}\delta\brak{n-k}
+\end{equation}
+\end{problem}
+This is the definition of $h(n)$.
+\begin{problem}
+Compute 
+%
+\begin{equation}
+\label{eq:convolution}
+y(n) = x(n)*h(n) = \sum_{n=-\infty}^{\infty}x(k)h(n-k)
+\end{equation}
+%
+where $x(k)$ is the \textbf{input\_signal} in Problem \ref{prob:output}.  You will need to suitably truncate $h(n)$ calculated in Problem \ref{prob:impulse_resp}. Use $y(n)$ as \textbf{output\_signal} in Problem \ref{prob:output}.  Comment. The operation in \eqref{eq:convolution} is known as
+{\em convolution}.
+\end{problem}
+%
+\begin{problem}
+Show that
+\begin{equation}
+y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
+\end{equation}
+\end{problem}
+%
+\section{DFT and FFT}
+\begin{problem}
+Compute
+\begin{equation}
+X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
+\end{equation}
+and $H(k)$ using $h(n)$.
+\end{problem}
+\begin{problem}
+Compute 
+\begin{equation}
+Y(k) = X(k)H(k)
+\end{equation}
+\end{problem}
+\begin{problem}
+Compute
+\begin{equation}
+ y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n = 0,1,\dots, N-1
+\end{equation}
+Use $y(n)$ as \textbf{output\_signal} in Problem \ref{prob:output}.
+\end{problem}
+\begin{problem}
+Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
+\end{problem}
+%
+\begin{problem}
+Wherever possible, express all the above equations as matrix equations.
+\end{problem}
 
 %
 
