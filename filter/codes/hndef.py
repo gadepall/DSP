@@ -6,9 +6,6 @@ import shlex
 #end if
 
 
-
-n=np.linspace(-2,3,6)
-x=np.array([1.0,2.0,3.0,4.0,2.0,1.0,0,0])
 k = 12
 h = np.zeros(k)
 h[0] = 1
@@ -27,7 +24,6 @@ plt.grid()# minor
 
 #If using termux
 plt.savefig('../figs/hndef.pdf')
-plt.savefig('../figs/hndef.eps')
 subprocess.run(shlex.split("termux-open ../figs/hndef.pdf"))
 #else
 #plt.show()

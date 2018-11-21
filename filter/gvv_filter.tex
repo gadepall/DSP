@@ -431,56 +431,59 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hndef
 \label{fig:hndef}
 \end{figure}
 %
-\end{enumerate}
-
-\begin{problem}
-Compute 
+\item Compute 
 %
 \begin{equation}
 \label{eq:convolution}
 y(n) = x(n)*h(n) = \sum_{n=-\infty}^{\infty}x(k)h(n-k)
 \end{equation}
 %
-where $x(k)$ is the \textbf{input\_signal} in Problem \ref{prob:output}.  You will need to suitably truncate $h(n)$ calculated in Problem \ref{prob:impulse_resp}. Use $y(n)$ as \textbf{output\_signal} in Problem \ref{prob:output}.  Comment. The operation in \eqref{eq:convolution} is known as
+Comment. The operation in \eqref{eq:convolution} is known as
 {\em convolution}.
-\end{problem}
 %
-\begin{problem}
-Show that
+\\
+\solution The following code plots Fig. \ref{fig:ynconv}. Note that this is the same as 
+$y(n)$ in  Fig. 
+\ref{fig:xnyn}. 
+%
+\begin{lstlisting}
+wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/ynconv.py
+\end{lstlisting}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/ynconv}
+\caption{$y(n)$ from the definition of convolution}
+\label{fig:ynconv}
+\end{figure}
+
+\item Show that
 \begin{equation}
 y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
 \end{equation}
-\end{problem}
+\end{enumerate}
+
 %
 \section{DFT and FFT}
-\begin{problem}
+\begin{enumerate}[\thesection.1]
+\item
 Compute
 \begin{equation}
 X(k) \define \sum _{n=0}^{N-1}x(n) e^{-\j2\pi kn/N}, \quad k = 0,1,\dots, N-1
 \end{equation}
 and $H(k)$ using $h(n)$.
-\end{problem}
-\begin{problem}
-Compute 
+\item Compute 
 \begin{equation}
 Y(k) = X(k)H(k)
 \end{equation}
-\end{problem}
-\begin{problem}
-Compute
+\item Compute
 \begin{equation}
  y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n = 0,1,\dots, N-1
 \end{equation}
 Use $y(n)$ as \textbf{output\_signal} in Problem \ref{prob:output}.
-\end{problem}
-\begin{problem}
-Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
-\end{problem}
-%
-\begin{problem}
-Wherever possible, express all the above equations as matrix equations.
-\end{problem}
-
+\item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and 
+IFFT.
+\item Wherever possible, express all the above equations as matrix equations.
+\end{enumerate}
 %
 
 \end{document}
