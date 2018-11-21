@@ -399,7 +399,7 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hn.py
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/hn}
-\caption{$\abs{H\brak{e^{\j\omega}}}$}
+\caption{$h(n)$ as the inverse of $H(z)$}
 \label{fig:hn}
 \end{figure}
 %
@@ -413,10 +413,24 @@ Is the system defined by \eqref{eq:iir_filter} stable for the impulse response i
 Compute and sketch $h(n)$ using 
 \begin{equation}
 \label{eq:iir_filter_h}
- \sum _{m=0}^{M}a\brak{m}h\brak{n-m}=\sum _{k=0}^{N}b\brak{k}\delta\brak{n-k}
+h(n) + \frac{1}{2}h(n-1) = \delta(n) + \delta(n-2), 
 \end{equation}
 %
 This is the definition of $h(n)$.
+\\
+\solution The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
+\ref{fig:hn}. 
+%
+\begin{lstlisting}
+wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hndef.py
+\end{lstlisting}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/hndef}
+\caption{$h(n)$ from the definition}
+\label{fig:hndef}
+\end{figure}
+%
 \end{enumerate}
 
 \begin{problem}

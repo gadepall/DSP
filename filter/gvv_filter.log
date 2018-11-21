@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  20 NOV 2018 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  21 NOV 2018 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,42 +664,35 @@ LaTeX Warning: Command \j invalid in math mode on input line 369.
 
 File: ./figs/hn.eps Graphic file (type eps)
 <./figs/hn.eps>
+File: ./figs/hndef.eps Graphic file (type eps)
+ <./figs/hndef.eps> [2]
 
-LaTeX Warning: Command \j invalid in math mode on input line 402.
-
-
-LaTeX Warning: Command \j invalid in math mode on input line 402.
-
-
-LaTeX Warning: Reference `prob:output' on page 2 undefined on input line 430.
+LaTeX Warning: Reference `prob:output' on page 3 undefined on input line 444.
 
 
-LaTeX Warning: Reference `prob:output' on page 2 undefined on input line 430.
-
-[2]
-
-LaTeX Warning: Command \j invalid in math mode on input line 445.
+LaTeX Warning: Reference `prob:output' on page 3 undefined on input line 444.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 458.
+LaTeX Warning: Command \j invalid in math mode on input line 459.
 
 
-LaTeX Warning: Reference `prob:output' on page 3 undefined on input line 460.
+LaTeX Warning: Command \j invalid in math mode on input line 472.
 
-[3
 
-] (./gvv_filter.aux)
+LaTeX Warning: Reference `prob:output' on page 3 undefined on input line 474.
+
+[3] (./gvv_filter.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7424 strings out of 492645
- 111756 string characters out of 6118921
- 393367 words of memory out of 5000000
- 11204 multiletter control sequences out of 15000+600000
+ 7429 strings out of 492645
+ 111831 string characters out of 6118921
+ 400367 words of memory out of 5000000
+ 11208 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  36i,9n,40p,329b,1243s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_filter.dvi (3 pages, 13788 bytes).
+Output written on gvv_filter.dvi (3 pages, 14596 bytes).
