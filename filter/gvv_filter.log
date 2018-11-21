@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  21 NOV 2018 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  21 NOV 2018 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,21 +674,21 @@ LaTeX Warning: Command \j invalid in math mode on input line 471.
 
 LaTeX Warning: Command \j invalid in math mode on input line 480.
 
+File: ./figs/yndft.eps Graphic file (type eps)
+<./figs/yndft.eps> [3] [4
 
-LaTeX Warning: Reference `prob:output' on page 3 undefined on input line 482.
+] (./gvv_filter.aux)
 
-[3] (./gvv_filter.aux)
-
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7434 strings out of 492645
- 111911 string characters out of 6118921
+ 7437 strings out of 492645
+ 111955 string characters out of 6118921
  400367 words of memory out of 5000000
- 11212 multiletter control sequences out of 15000+600000
+ 11214 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  36i,9n,40p,228b,1243s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_filter.dvi (3 pages, 15328 bytes).
+Output written on gvv_filter.dvi (4 pages, 16456 bytes).
