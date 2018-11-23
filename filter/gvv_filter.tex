@@ -561,22 +561,9 @@ IFFT.
 \end{enumerate}
 %
 \section{Exercises}
+
 Answer the following questions by looking at the python code in Problem \ref{prob:output}.
 \begin{enumerate}[label=\thesection.\arabic*]
-
-\item What is the sampling frequency of the input signal?
-\\
-\solution
-Sampling frequency(fs)=44.1kHZ.
-\item
-What is type, order and  cutoff-frequency of the above butterworth filter
-\\
-\solution
-The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
-%
-\item
-Modifying the code with different input parameters and to get the best possible output.
-%
 \item
 The command
 \begin{lstlisting}
@@ -592,6 +579,20 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 \textbf{signal.filtfilt} with your own routine and verify.
 %
 \item Repeat all the exercises in the previous sections for the above $a$ and $b$.
+
+\item What is the sampling frequency of the input signal?
+\\
+\solution
+Sampling frequency(fs)=44.1kHZ.
+\item
+What is type, order and  cutoff-frequency of the above butterworth filter
+\\
+\solution
+The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
+%
+\item
+Modifying the code with different input parameters and to get the best possible output.
+%
 \end{enumerate}
 
 \end{document}
