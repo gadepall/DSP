@@ -19,6 +19,7 @@
 %\usepackage{txfonts}
 %\restoresymbol{TXF}{iint}
 %\usepackage{wasysym}
+\usepackage{hyperref}
 \usepackage{amsthm}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
@@ -231,6 +232,90 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 \begin{abstract}
 This manual provides a simple introduction to digital signal processing.
 \end{abstract}
+\section{Software Installation}
+Run the following commands
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install libffi-dev
+sudo pip install pysoundfile
+\end{lstlisting}
+\section{Digital Filter}
+\begin{problem}
+\label{prob:input}
+Download the sound file from  
+\begin{lstlisting}
+wget https://raw.githubusercontent.com/gadepall/ 
+EE1310/master/filter/codes/Sound_Noise.wav
+\end{lstlisting}
+%\href{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}{\url{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}}  
+%in the link given below.
+%\linebreak
+\end{problem}
+
+\begin{problem}
+\label{prob:spectrogram}
+You will find a spectrogram at \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}. 
+%\end{problem}
+%%
+%
+%%\onecolumn
+%%\input{./figs/fir}
+%\begin{problem}
+Upload the sound file that you downloaded in Problem \ref{prob:input} in the spectrogram  and play.  Observe the spectrogram. What do you find?
+\end{problem}
+%
+\solution There are a lot of yellow lines between 440 Hz to 5.1 KHz.  These represent the synthesizer key tones. Also, the key strokes
+are audible along with background noise.
+% By observing spectrogram, it clearly shows that tonal frequency is under 4kHz. And above 4kHz only noise is present.
+\begin{problem}
+\label{prob:output}
+Write the python code for removal of out of band noise and execute the code.
+\end{problem}
+\solution
+\lstinputlisting{./codes/Cancel_noise.py}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=\columnwidth]{enc_block_diag.png}
+%\caption{}
+%\label{fig:convolution encoder}
+%\end{figure}
+%\input{block_enc}
+\begin{problem}
+The output of the python script in Problem \ref{prob:output} is the audio file Sound\_With\_ReducedNoise.wav. Play the file in the spectrogram in Problem \ref{prob:spectrogram}. What do you observe?
+\end{problem}
+\solution The key strokes as well as background noise is subdued in the audio.  Also,  the signal is blank for frequencies above 5.1 kHz.
+\linebreak
+Answer the following questions by looking at the python code in Problem \ref{prob:output}.
+\begin{problem}
+What is the sampling frequency of the input signal?
+\end{problem}
+\solution
+Sampling frequency(fs)=44.1kHZ.
+\begin{problem}
+What is type, order and  cutoff-frequency of the above butterworth filter
+\end{problem}
+\solution
+The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
+%
+\begin{problem}
+Modifying the code with different input parameters and to get the best possible output.
+\end{problem}
+%
+\begin{problem}
+The command
+\begin{lstlisting}
+	output_signal = signal.filtfilt(b, a, input_signal)
+	\end{lstlisting}
+in Problem \ref{prob:output} is executed through the following difference equation
+\begin{equation}
+\label{eq:iir_filter}
+ \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k}
+\end{equation}
+%
+where the input signal is $x(n)$ and the output signal is $y(n)$ with initial values all 0. Replace
+\textbf{signal.filtfilt} with your own routine and verify.
+\end{problem}
+%
 
 \section{Difference Equation}
 \begin{enumerate}[\thesection.1]
