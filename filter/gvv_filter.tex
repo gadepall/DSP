@@ -32,7 +32,8 @@
 \usepackage{multirow}
 %\usepackage{algorithm}
 %\usepackage{algpseudocode}
-\usepackage{enumerate}
+%\usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{iithtlc}
 %\usepackage[framemethod=tikz]{mdframed}
@@ -53,6 +54,9 @@
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+%\renewcommand{\labelenumi}{\textbf{\theenumi}}
+%\renewcommand{\theenumi}{P.\arabic{enumi}}
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -221,8 +225,11 @@ released under GNU GPL.  Free to use for anything. }% <-this % stops a space
 
 \tableofcontents
 
-\renewcommand{\thefigure}{\thesection.\theenumi}
-\renewcommand{\thetable}{\thesection.\theenumi}
+%\renewcommand{\thefigure}{\thesection.\theenumi}
+%\renewcommand{\thetable}{\thesection.\theenumi}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
 
 %\renewcommand{\theequation}{\thesection}
 
@@ -236,11 +243,13 @@ This manual provides a simple introduction to digital signal processing.
 Run the following commands
 \begin{lstlisting}
 sudo apt-get update
-sudo apt-get install libffi-dev
+sudo apt-get install libffi-dev libsndfile1
 sudo pip install pysoundfile
 \end{lstlisting}
 \section{Digital Filter}
-\begin{problem}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item
 \label{prob:input}
 Download the sound file from  
 \begin{lstlisting}
@@ -250,9 +259,7 @@ EE1310/master/filter/codes/Sound_Noise.wav
 %\href{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}{\url{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}}  
 %in the link given below.
 %\linebreak
-\end{problem}
-
-\begin{problem}
+\item
 \label{prob:spectrogram}
 You will find a spectrogram at \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}. 
 %\end{problem}
@@ -262,15 +269,15 @@ You will find a spectrogram at \href{https://academo.org/demos/spectrum-analyzer
 %%\input{./figs/fir}
 %\begin{problem}
 Upload the sound file that you downloaded in Problem \ref{prob:input} in the spectrogram  and play.  Observe the spectrogram. What do you find?
-\end{problem}
+\\
 %
 \solution There are a lot of yellow lines between 440 Hz to 5.1 KHz.  These represent the synthesizer key tones. Also, the key strokes
 are audible along with background noise.
 % By observing spectrogram, it clearly shows that tonal frequency is under 4kHz. And above 4kHz only noise is present.
-\begin{problem}
+\item
 \label{prob:output}
 Write the python code for removal of out of band noise and execute the code.
-\end{problem}
+\\
 \solution
 \lstinputlisting{./codes/Cancel_noise.py}
 %\begin{figure}[h]
@@ -280,45 +287,14 @@ Write the python code for removal of out of band noise and execute the code.
 %\label{fig:convolution encoder}
 %\end{figure}
 %\input{block_enc}
-\begin{problem}
+\item
 The output of the python script in Problem \ref{prob:output} is the audio file Sound\_With\_ReducedNoise.wav. Play the file in the spectrogram in Problem \ref{prob:spectrogram}. What do you observe?
-\end{problem}
+\\
 \solution The key strokes as well as background noise is subdued in the audio.  Also,  the signal is blank for frequencies above 5.1 kHz.
-\linebreak
-Answer the following questions by looking at the python code in Problem \ref{prob:output}.
-\begin{problem}
-What is the sampling frequency of the input signal?
-\end{problem}
-\solution
-Sampling frequency(fs)=44.1kHZ.
-\begin{problem}
-What is type, order and  cutoff-frequency of the above butterworth filter
-\end{problem}
-\solution
-The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
-%
-\begin{problem}
-Modifying the code with different input parameters and to get the best possible output.
-\end{problem}
-%
-\begin{problem}
-The command
-\begin{lstlisting}
-	output_signal = signal.filtfilt(b, a, input_signal)
-	\end{lstlisting}
-in Problem \ref{prob:output} is executed through the following difference equation
-\begin{equation}
-\label{eq:iir_filter}
- \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k}
-\end{equation}
-%
-where the input signal is $x(n)$ and the output signal is $y(n)$ with initial values all 0. Replace
-\textbf{signal.filtfilt} with your own routine and verify.
-\end{problem}
-%
 
+\end{enumerate}
 \section{Difference Equation}
-\begin{enumerate}[\thesection.1]
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 \item Let
 \begin{equation}
 x(n) = \cbrak{\underset{\uparrow}{1},2,3,4,2,1}
@@ -347,7 +323,7 @@ wget https://github.com/gadepall/EE1310/raw/master/filter/codes/xnyn.py
 
 \end{enumerate}
 \section{$Z$-transform}
-\begin{enumerate}[\thesection.1]
+\begin{enumerate}[label=\thesection.\arabic*]
 \item The $Z$-transform of $x(n)$ is defined as
 %
 \begin{equation}
@@ -457,7 +433,7 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/dtft.
 \end{enumerate}
 
 \section{Impulse Response}
-\begin{enumerate}[\thesection.1]
+\begin{enumerate}[label=\thesection.\arabic*]
 \item \label{prob:impulse_resp}
 Find an expression for $h(n)$ using $H(z)$, given that 
 %in Problem \ref{eq:ztransab} and \eqref{eq:anun}, given that
@@ -549,7 +525,7 @@ y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
 
 %
 \section{DFT and FFT}
-\begin{enumerate}[\thesection.1]
+\begin{enumerate}[label=\thesection.\arabic*]
 \item
 Compute
 \begin{equation}
@@ -584,6 +560,39 @@ IFFT.
 \item Wherever possible, express all the above equations as matrix equations.
 \end{enumerate}
 %
+\section{Exercises}
+Answer the following questions by looking at the python code in Problem \ref{prob:output}.
+\begin{enumerate}[label=\thesection.\arabic*]
+
+\item What is the sampling frequency of the input signal?
+\\
+\solution
+Sampling frequency(fs)=44.1kHZ.
+\item
+What is type, order and  cutoff-frequency of the above butterworth filter
+\\
+\solution
+The given butterworth filter is low pass with order=2 and cutoff-frequency=4kHz.
+%
+\item
+Modifying the code with different input parameters and to get the best possible output.
+%
+\item
+The command
+\begin{lstlisting}
+	output_signal = signal.filtfilt(b, a, input_signal)
+	\end{lstlisting}
+in Problem \ref{prob:output} is executed through the following difference equation
+\begin{equation}
+\label{eq:iir_filter}
+ \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k}
+\end{equation}
+%
+where the input signal is $x(n)$ and the output signal is $y(n)$ with initial values all 0. Replace
+\textbf{signal.filtfilt} with your own routine and verify.
+%
+\item Repeat all the exercises in the previous sections for the above $a$ and $b$.
+\end{enumerate}
 
 \end{document}
 
