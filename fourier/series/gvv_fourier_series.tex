@@ -47,6 +47,9 @@
   %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
 
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
 %\usepackage{stmaryrd}
 
 
@@ -235,6 +238,10 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 
 \tableofcontents
 
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
 \bigskip
 
 %\begin{abstract}
@@ -267,14 +274,17 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 \IEEEpeerreviewmaketitle
 
 \begin{abstract}
-This manual provides a quick introduction to Fourier series and Low Pass Filters (LPF), besides facilitating the use of Python for Signals \& Systems.
+This manual provides a quick introduction to Fourier series through Python.
 \end{abstract}
 %\newpage
 \section{Fourier Series}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+
 %
-\begin{problem}
+\item
 Type the following program in python to obtain $g(t)$.  $g(t)$ is a periodic signal called a square wave with amplitude $A = 5V$ and time period $T=20 ms$.
-\end{problem}
+
 %
 \solution
 \begin{lstlisting}
@@ -292,13 +302,13 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/fourier/series/cod
 \label{fig:1.1}
 \end{figure}
 %
-\begin{problem}
+\item
 Find the frequency of $g(t)$.
-\end{problem}
+
 %
 \solution
 The frequency of $g(t)$ is given by $f = \frac{1}{T} = 50$ Hz.
-\begin{problem}
+\item
 The following expression
 %
 \begin{equation}
@@ -306,10 +316,13 @@ g(t) = \sum_{n=0}^{\infty}a_n\cos 2\pi n f t + b_n \sin 2 \pi n f t
 \end{equation}
 is known as the Fourier series expansion of $g(t)$, where $f = \frac{1}{T}$.  Find 
 \begin{align}
+\label{eq:coeffs}
+\begin{split}
 a_n &= \frac{2}{T} \int_{0}^{T}g(t) \cos 2\pi nf t \, dt \\
 b_n &= \frac{2}{T} \int_{0}^{T}g(t) \sin 2\pi nf t \, dt
+\end{split}
 \end{align}
-\end{problem}
+
 %
 \solution 
 \begin{align}
@@ -326,9 +339,13 @@ Similarly,
 b_n &= \frac{2A}{T} \int_{0}^{T_0}\sin 2\pi nf t \,  dt \\
 &= \frac{A}{\pi n f T }\sbrak{1 - \cos 2\pi n f T_0}
 \end{align}
+\end{enumerate}
 \section{Gibbs Phenomenon}
 %
-\begin{problem}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+
+\item
 Using Python, compute the series 
 %
 \begin{equation}
@@ -338,7 +355,7 @@ Using Python, compute the series
 for $A=5, T= 20 ms$ and $a_n,b_n$ obtained in the previous problem.  Comment.
 %
 \label{fourier_series}
-\end{problem}
+
 \solution  Type the following program
 %
 \begin{lstlisting}
@@ -359,15 +376,20 @@ to obtain the following figure.
 Through this problem, we find that the square wave can be approximated through an infinite sum of sinusoids. The ripples in Fig. \ref{fig:1.4} occur due to convergence issues and is known as the Gibbs phenomenon.
 %\input{./chapter1/chapter1_sol}
 %
+\end{enumerate}
+
 \section{Filter}
 %
 %\chapter{The Optimum Receiver}
 
 %\subsection{RC Circuit}
 %
-\begin{problem}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+
+\item
 Refer to the circuit in Fig. \ref{fig:2.1}. Suppose you are told that $C$ has a resistance given by $\frac{1}{s  C}$.   Find the ratio $H(s)$ of the output voltage and input voltage using node analysis.  The above circuit is known as a low pass filter and $H(s)$ is known as the transfer function.
-\end{problem}
+
 %
 %
 \begin{figure}[!h]
@@ -451,11 +473,11 @@ H(s) &= \frac{1}{\brak{sCR + 1 }\cbrak{\brak{sCR + 2 }^2-1}-\brak{sCR + 2 }}
 \label{lpf_laplace}
 \end{align}
 %
-\begin{problem}
+\item
 Substitute $s = \jmath 2\pi f, \jmath =  \sqrt{-1}$ in \eqref{lpf_laplace} to obtain $H(f)$.  
 $H(f)$ is 
 known as the frequency response. Plot $\abs{H(f)}$ in octave for $-20 < f < 20$, given that $R = 1 \,k\Omega$ and $C = 10 \,\mu F$.
-\end{problem}
+
 %
 \solution 
 %
@@ -475,10 +497,10 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/fourier/series/cod
 \caption{Frequency response of the $R-C$ filter}
 \label{fig:filter_plot}
 \end{figure}
-\begin{problem}
+\item
 Find the frequency at which $\abs{H(f)}^2 = \frac{1}{2}$. This frequency is
 known as the 3-dB bandwidth of $H(f)$.
-\end{problem}
+
 %
 \solution Substituting $sCR = \jmath x$ in \eqref{lpf_laplace},
 %
@@ -508,9 +530,9 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/fourier/series/cod
 %\lstinputlisting[language=python]{./codes/2.3.py}
 %
 This yields the value $f_{3\, dB} = 2.3395$ Hz.
-\begin{problem}
+\item
 Obtain the 3 dB bandwidth by solving the cubic equation in the previous problem
-\end{problem}
+
 %
 \solution In the above, let $y = z - \frac{13}{3}$.  Then the equation becomes
 %%
@@ -548,10 +570,10 @@ Note that this script gives the same result as the one in the previous problem.
 %x = \sbrak{\cbrak{-\frac{r}{2} + \sqrt{\frac{r^2}{4} + \frac{q^3}{27}} }^{\frac{1}{3}} + \cbrak{-\frac{r}{2} - \sqrt{\frac{r^2}{4} + \frac{q^3}{27}} }^{\frac{1}{3}} - \frac{13}{3}}^{\frac{1}{2}}
 %\end{align}
 %
-\begin{problem}
+\item
 \label{filter_op}
 Suppose the square wave in Fig. \ref{fig:1.1} is given as input to the filter in Fig. \ref{fig:filter_plot}.  Find and plot the filter output.
-\end{problem}
+
 %
 \solution  Using sinusoidal steady state analysis, if the input to the filter is
 %
@@ -570,6 +592,7 @@ the output will be
 %
 %
 \begin{multline}
+\label{eq:filter_output}
 \sum_{n=0}^{\infty}a_n\abs{H(nf)}\cos\cbrak{2\pi n f t + \angle H(nf)} 
 \\
 + b_n \abs{H(nf)}\sin\cbrak{2\pi n f t + \angle H(nf)}
@@ -591,22 +614,22 @@ The output of the filter is shown  in Fig. \ref{fig:2.5}
 \label{fig:2.5}
 \end{figure}
 %
-\begin{problem}
+\item
 Run the program in problem \ref{filter_op} by changing the for loop to
 \begin{verbatim}
 for n in range(2):
 \end{verbatim}
 Compare this output with the one in Fig. \ref{fig:2.5} by plotting in the same graph.
-\end{problem}
-\begin{problem}
+
+\item
 Interpret the result in problem \ref{filter_op}.
-\end{problem}
+
 %
 \solution
 In Fig. \ref{fig:filter_plot}, $\abs{H(0)} = 1$ and $\abs{H(50)} = 0.02$.  All other values of $H$ are very small.  $\abs{H(0)} = 1$ contributes the DC component and $\abs{H(50)} = 0.02$ yields the sinusoidal component of 50 Hz.  Thus, $H(f)$ filters all higher harmonics in the square wave in Fig. \ref{fig:1.1}.
-%\begin{problem}
+%\item
 %Sketch $\abs{H(nf)}$.
-%\end{problem}
+%
 %%
 %\solution
 %\lstinputlisting[language=octave]{./codes/2.6.m}
@@ -621,64 +644,64 @@ In Fig. \ref{fig:filter_plot}, $\abs{H(0)} = 1$ and $\abs{H(50)} = 0.02$.  All o
 %\end{figure}
 %%
 
-%\begin{problem}
+%\item
 %Connect $g(t)$ to the following circuit for $R = 10 \,k \Omega, C = 10 \,\mu F$ and observe the output $v(t)$.  Measure the amplitude and time period of $v(t)$.
-%\end{problem}
+%
 %\subsection{Circuit Analysis}
 %%
-%\begin{problem}
+%\item
 %	Obtain the expression for $H(s)$ using mesh analysis.
-%\end{problem}
+%
 %%
-%\begin{problem}
+%\item
 %	Repeat the above exercise using Thevenin's theorem.
-%	\end{problem}
+%	
 %	%
-%	\begin{problem}
+%	\item
 %		Repeat the above exercise using Norton's theorem.
-%		\end{problem}
+%		
 %	%
-%	\begin{problem}
+%	\item
 %		Repeat the above exercise using $Y-\Delta$ transformation.
-%	\end{problem}
-%\begin{problem}
+%	
+%\item
 %	Obtain all the two port network parameters for the circuit in Fig. \ref{fig:2.1}.
-%\end{problem}
+%
 %			
-%\begin{problem}
+%\item
 %For $R = 10 \,k \Omega, C = 1 \,\mu F$, plot $H(f)$ with respect to $f$.  Comment.
-%\end{problem}
+%
 %\subsection{RL Circuit}
 %%
-%\begin{problem}
+%\item
 	%Using node analysis, design an $R-L$ circuit with the same frequency response as the $R-C$ circuit in the previous section.  Comment.
-%\end{problem}
+%
 %%
-%\begin{problem}
+%\item
 %Obtain the frequency response for this $R-L$ circuit using mesh analysis.
-	%\end{problem}
+	%
 	%%
-%\begin{problem}
+%\item
 %Repeat the above exercise using Thevenin's theorem.
-%\end{problem}
+%
 		%%
-		%\begin{problem}
+		%\item
 %Repeat the above exercise using Norton's theorem.
-			%\end{problem}
+			%
 
 %\subsection{Bandpass Filter}
 %%
-%\begin{problem}
+%\item
 	%Design an $R-C$ bandpass filter  and use it to filter a higher harmonic from the square wave generated using the arduino.
-%\end{problem}
+%
 %%
-%\begin{problem}
+%\item
 %Obtain the frequency response of the above filter.
-%\end{problem}
+%
 %%
-%\begin{problem}
+%\item
 %Obtain the above frequency response using an $RLC$ circuit.
-%\end{problem}
+%
 %
 
 %\input{./chapter2_sol}
@@ -704,7 +727,66 @@ In Fig. \ref{fig:filter_plot}, $\abs{H(0)} = 1$ and $\abs{H(50)} = 0.02$.  All o
 %\newpage
 %\section{BER in Rayleigh Flat Slowly Fading Channels}
 %\input{chapter4} 
+\end{enumerate}
+\section{AC-DC Converter}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item Let
+\begin{equation}
+x(t) = 16 \sin 100\pi t
+\end{equation}
+Sketch $x_1(t)=\abs{x(t)}$.
+\item If
+\begin{equation}
+\label{eq:rectifier}
+x_1(t) = \sum_{n=0}^{\infty}a_{1n}\cos 2\pi n f t + b_{1n} \sin 2 \pi n f t,
+\end{equation}
+%
+show that
+\begin{align}
+\label{eq:coeffs_rectifier}
+a_{10} &= \frac{32}{\pi}
+\\
+a_{1n} &= \frac{32}{\pi\brak{1-4n^2}}, \quad n \geq 1
+\\
+b_{1n} &=0
+\end{align}
+find $a_{1n}$ and $b_{1n}$ using \eqref{eq:coeffs}.
+\item Verify \eqref{eq:coeffs_rectifier} using \eqref{eq:rectifier} through a Python 
+code. 
+\item Given
+\begin{equation}
+H(s)= \frac{1}{1+sCR}, \quad R = 1 \Omega, C =1 mF,
+\end{equation}
+sketch $\abs{H(f)}$.
+\item Find $y(t)$ in Fig. \ref{fig:filter} using  \eqref{eq:filter_output}  and sketch it.
 
+
+\begin{figure}[!hb]
+\centering
+\resizebox {\columnwidth} {!} {
+\begin{tikzpicture}[auto,>=latex']
+    \tikzstyle{block} = [draw, shape=rectangle, minimum height=3em, minimum 
+width=3em, node distance=2cm, line width=1pt]
+    \tikzstyle{sum} = [draw, shape=circle, node distance=1.5cm, line width=1pt, 
+minimum width=1.25em]
+    \tikzstyle{branch}=[fill,shape=circle,minimum size=4pt,inner sep=0pt]
+    %Creating Blocks and Connection Nodes
+    \node at (-2.5,0) (input) {$x(t)$};
+    \node [block] (h1) {$H(f)$};
+    \node at (2.5,0) (output) {$y(t)$};
+    \path (input) -- coordinate(branch1) (h1);
+    %Conecting Blocks
+    \begin{scope}[line width=1pt]
+         \draw[->] (input) -- (h1);
+         \draw[->] (h1) -- (output);
+    \end{scope}
+\end{tikzpicture}
+}
+\caption{}
+\label{fig:filter}
+\end{figure}
+\end{enumerate}
 \end{document}
 
 
