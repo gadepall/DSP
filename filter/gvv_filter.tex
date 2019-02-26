@@ -243,8 +243,8 @@ This manual provides a simple introduction to digital signal processing.
 Run the following commands
 \begin{lstlisting}
 sudo apt-get update
-sudo apt-get install libffi-dev libsndfile1
-sudo pip install pysoundfile
+sudo apt-get install libffi-dev libsndfile1 python3-scipy  python3-numpy python3-matplotlib 
+sudo pip install cffi pysoundfile 
 \end{lstlisting}
 \section{Digital Filter}
 \begin{enumerate}[label=\thesection.\arabic*
@@ -571,7 +571,7 @@ The command
 	\end{lstlisting}
 in Problem \ref{prob:output} is executed through the following difference equation
 \begin{equation}
-\label{eq:iir_filter}
+\label{eq:iir_filter_gen}
  \sum _{m=0}^{M}a\brak{m}y\brak{n-m}=\sum _{k=0}^{N}b\brak{k}x\brak{n-k}
 \end{equation}
 %
