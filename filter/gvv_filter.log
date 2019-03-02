@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  25 NOV 2018 09:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  26 FEB 2019 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,11 +643,7 @@ Package: listings 2018/09/02 1.7 (Carsten Heinz)
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/listings/ls
 tlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-) (./gvv_filter.aux
-
-LaTeX Warning: Label `eq:iir_filter' multiply defined.
-
-)
+) (./gvv_filter.aux)
 \openout1 = `gvv_filter.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 73.
@@ -821,7 +817,13 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 17.
-)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+])
 Underfull \hbox (badness 10000) in paragraph at lines 291--294
 []\OT1/txr/m/n/12 The out-put of the python script
  []
@@ -841,12 +843,8 @@ Underfull \hbox (badness 6927) in paragraph at lines 291--294
 \OT1/txr/bx/n/12 Solution: \OT1/txr/m/n/12 The key strokes as well as
  []
 
-[1
-
-
-]
 File: ./figs/xnyn.eps Graphic file (type eps)
- <./figs/xnyn.eps>
+<./figs/xnyn.eps>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 325.
@@ -856,7 +854,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 325.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3396) has occurred while \output is active []
 
  [2]
 
@@ -903,19 +901,15 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 598.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 598.
 Package rerunfilecheck Info: File `gvv_filter.out' has not changed.
 (rerunfilecheck)             Checksum: 2154E13812F1013637C6C87519C101FD;346.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 598.
  ) 
 Here is how much of TeX's memory you used:
- 11643 strings out of 492645
- 177831 string characters out of 6118921
- 547940 words of memory out of 5000000
- 15360 multiletter control sequences out of 15000+600000
+ 11648 strings out of 492645
+ 177896 string characters out of 6118921
+ 545940 words of memory out of 5000000
+ 15365 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,9n,40p,246b,1416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,9n,40p,246b,1930s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_filter.dvi (5 pages, 53024 bytes).
+Output written on gvv_filter.dvi (5 pages, 53216 bytes).
