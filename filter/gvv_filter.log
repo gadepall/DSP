@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  26 FEB 2019 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.30)  10 MAR 2019 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **gvv_filter.tex
 (./gvv_filter.tex
 LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 85 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IE
 EEtran.cls
@@ -904,12 +904,12 @@ Package rerunfilecheck Info: File `gvv_filter.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 598.
  ) 
 Here is how much of TeX's memory you used:
- 11648 strings out of 492645
- 177896 string characters out of 6118921
- 545940 words of memory out of 5000000
- 15365 multiletter control sequences out of 15000+600000
+ 11649 strings out of 494591
+ 177908 string characters out of 6176027
+ 541979 words of memory out of 5000000
+ 15115 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
+ 17 hyphenation exceptions out of 8191
  36i,9n,40p,246b,1930s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_filter.dvi (5 pages, 53216 bytes).
+Output written on gvv_filter.dvi (5 pages, 53648 bytes).
